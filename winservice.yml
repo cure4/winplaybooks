@@ -1,0 +1,8 @@
+---
+- name: Start Service
+  hosts: win
+  tasks:
+   - name: Start a service
+     ansible.windows.win_service:
+       name: wuauserv
+       state: started

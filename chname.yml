@@ -1,0 +1,12 @@
+---
+- name: Change name
+  hosts: win
+  tasks:
+  - name: Change the hostname to sina-server
+    ansible.windows.win_hostname:
+      name: sina-server
+    register: res
+
+  - name: Reboot
+    ansible.windows.win_reboot:
+    when: res.reboot_required

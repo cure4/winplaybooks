@@ -1,0 +1,10 @@
+---
+- hosts: win
+  become: false
+  tasks:
+  - name: install firefox
+    win_chocolatey:
+      name: '{{item}}'
+      state: present
+    loop:
+    - firefox

@@ -1,0 +1,10 @@
+- hosts: win
+  gather_facts: true
+  tasks:
+  - name: creating user 
+    win_user:
+     name: ansibleuser
+     password: 123
+     state: present
+     groups:
+       - Users

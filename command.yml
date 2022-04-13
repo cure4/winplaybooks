@@ -1,0 +1,6 @@
+---
+- name: run command
+  hosts: win 
+  tasks:
+   - name: run an executable using win_command
+     win_command: ping 8.8.8.8

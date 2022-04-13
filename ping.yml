@@ -1,0 +1,8 @@
+---
+- name: manage windows servers
+  hosts: win
+  become: false
+  tasks:
+  - name: ping
+    win_ping:
+        

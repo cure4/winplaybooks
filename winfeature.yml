@@ -1,0 +1,7 @@
+- name: Install Feature
+  hosts: win
+  tasks:
+  - name: Install Telnet Client
+    ansible.windows.win_feature:
+      name: Telnet-Client
+      state: present
