@@ -12,8 +12,8 @@
       win_get_url:
         url: ftp://172.16.1.16/deploymentclient.conf
         dest: C:\Program Files\SplunkUniversalForwarder\etc\system\local
-        url_username: ftpuser
-        url_password: saman@1399
+        url_username: 
+        url_password: 
     - name: Restart a service
       tags: service
       ansible.windows.win_service:
