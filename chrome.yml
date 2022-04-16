@@ -1,0 +1,10 @@
+---
+- name:
+  hosts: test
+  become: true
+  tasks: 
+  - name: install mc
+    yum:
+     name: mc
+     state: present
+    when: ansible_os_family == "RedHat" 

@@ -1,0 +1,9 @@
+---
+- name:
+  hosts: win
+  tasks: 
+  - name: Install noteplus
+    win_package:
+      path: https://www.hass.de/files/nodes/story/45/npp.7.5.9.installer.x64.en-us.msi
+      product_id: noteplusplus
+      state: present
