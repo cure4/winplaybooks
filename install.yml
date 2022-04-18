@@ -1,0 +1,17 @@
+---
+- name: install
+  become: yes
+  become_method: runas
+  become_user: user
+  hosts: win
+  gather_facts: yes
+  tasks: 
+  - name: Install winrar
+    win_package:
+      path: C:\Temp\winrar-x64-611.exe
+      product_id: winrar
+      state: present
+    
+    
+   
+

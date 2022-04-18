@@ -6,14 +6,11 @@
     - name: Install Splunk Forwarder
       win_chocolatey:
         name: splunk-universalforwarder
-        state: present
-    - name: Download file from FTP with authentication
-      tags: conf
-      win_get_url:
-        url: ftp://172.16.1.16/deploymentclient.conf
-        dest: C:\Program Files\SplunkUniversalForwarder\etc\system\local
-        url_username: 
-        url_password: 
+        state: present 
+    - name: Copy a single file
+      win_copy:
+        src: /home/deploymentclient.conf
+        dest: C:\Program Files\SplunkUniversalForwarder\etc\system\local\
     - name: Restart a service
       tags: service
       ansible.windows.win_service:
